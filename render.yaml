@@ -1,0 +1,12 @@
+# Render Blueprint — static frontend (see backend/ for future API)
+staticSites:
+  - name: amrita-books-demo
+    buildCommand: cd frontend && npm install --include=dev --registry https://registry.npmjs.org/ && npm run build
+    staticPublishPath: frontend/dist
+    pullRequestPreviewsEnabled: true
+    buildFilter:
+      paths:
+        - frontend/**
+    envVars:
+      - key: NODE_VERSION
+        value: "20"

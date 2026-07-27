@@ -1,0 +1,30 @@
+{
+  "name": "amrita-books-demo",
+  "version": "1.0.0",
+  "description": "Amrita Books - PDF & EPUB Ingestion & Rendering PoC",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "amrita-books-demo": "file:..",
+    "epubjs": "^0.3.93",
+    "jszip": "^3.10.1",
+    "pdfjs-dist": "^5.6.205",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.4",
+    "vite": "^8.1.5"
+  }
+}
