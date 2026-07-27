@@ -10,6 +10,9 @@ export default defineConfig({
     port: 8085,
   },
   optimizeDeps: {
-    include: ['epubjs', 'jszip'],
+    include: ['epubjs', 'jszip', 'pdfjs-dist'],
+  },
+  build: {
+    target: 'es2022',
   },
 });

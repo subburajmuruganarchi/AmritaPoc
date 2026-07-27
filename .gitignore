@@ -7,12 +7,26 @@ backend/node_modules/
 dist/
 frontend/dist/
 
-# Vite cache
+# Vite
 .vite/
+frontend/.vite/
+
+# Local env
+.env
+.env.*
+!.env.example
+
+# Vercel (local CLI metadata — do not commit project links)
+.vercel/
 
 # Logs
 *.log
+npm-debug.log*
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
+
+# Editor
+*.swp
+*.swo

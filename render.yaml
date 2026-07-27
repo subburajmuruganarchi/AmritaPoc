@@ -1,8 +1,9 @@
-# Render Blueprint — static frontend (see backend/ for future API)
+# Production static site — frontend only (backend/ is local dev, not deployed).
 staticSites:
   - name: amrita-books-demo
-    buildCommand: cd frontend && npm install --include=dev --registry https://registry.npmjs.org/ && npm run build
-    staticPublishPath: frontend/dist
+    rootDir: frontend
+    buildCommand: npm install --include=dev --registry https://registry.npmjs.org/ && npm run build
+    staticPublishPath: dist
     pullRequestPreviewsEnabled: true
     buildFilter:
       paths:
@@ -10,3 +11,7 @@ staticSites:
     envVars:
       - key: NODE_VERSION
         value: "20"
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
